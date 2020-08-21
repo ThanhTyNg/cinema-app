@@ -1,38 +1,8 @@
-# version: 2.1
-# orbs:
-#   node: circleci/node@4.0.0
-# jobs:
-#   build:
-#     docker:
-#       - image: circleci/node@4.0.0
-#     steps:
-#       - checkout
-#       - run: npm install
-#   test:
-#     docker:
-#       - image: circleci/node@3.0.0
-#     steps:
-#       - checkout
-#       - run: npm test
-# workflows:
-#   version: 2
-#   buid_and_test:
-#     jobs:
-#       - build
-#       - test
 version: 2.1
-orbs:
-  node: circleci/node@4.0.0
 jobs:
-  install-node-example:
+  build:
     docker:
-      - image: circleci/node@4.0.0
+      - image: circleci/node:4.8.2 # the primary container, where your job's commands are run
     steps:
-      - checkout
-      - node/install:
-          install-yarn: true
-      - run: node --version
-workflows:
-  test_my_app:
-    jobs:
-      - install-node-example
+      - checkout # check out the code in the project directory
+      - run: echo "hello world" # run the `echo` command

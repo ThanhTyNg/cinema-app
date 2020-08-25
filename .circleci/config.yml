@@ -1,6 +1,7 @@
 version: 2.1
 
 jobs:
+  // there will be jobs for build, deploy-to-aws-s3, deploy-to-aws-cloudfront
   build:
     docker:
       - image: circleci/node:13.12.0

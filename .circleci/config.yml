@@ -32,7 +32,7 @@ aliases:
         sudo apt-get -y -qq update
         sudo apt-get install -y awscli
         sudo apt-get install -y python-pip python-dev build-essential
-  - &build-project
+  - &build-projectnpm
     run:
       name: Build Project
       command: |
@@ -49,7 +49,6 @@ jobs:
       - checkout
       - *show-current-branch-name
       - *restore-cache
-      - *install-yarn
       - *install-dependencies
       - *save-cache
   linting:

@@ -15,14 +15,10 @@ aliases:
       keys:
         - app-{{ checksum "package.json" }}
         - app-
-  - &install-yarn
-    run:
-      name: Install yarn
-      command: npm install -g yarn
   - &install-dependencies
     run:
       name: Install dependencies
-      command: yarn install
+      command: npm install
   - &save-cache
     save_cache:
       paths:

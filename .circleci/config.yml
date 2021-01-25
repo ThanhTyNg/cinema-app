@@ -138,7 +138,7 @@ jobs:
                   "text": {
                       "type": "plain_text",
                       "text": "${CIRCLE_BRANCH} branch development to aws S3 and cloudfront is complete. 👍",
-                      "emoij": true
+                      "emoji": true
                     }
                 },
                 {
